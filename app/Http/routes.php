@@ -14,3 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/thanks', function () {
+
+    \Stripe\Stripe::setApiKey(getenv('STRIPE_SECRET_KEY'));
+
+    try {
+        $charge = \Stripe\Charge::create(array(
+            "amount" => 100,
+            "currency" => "jpy",
+            "source" => $_POST['stripeToken'],
+            "description" => "100yen pay"
+        ));
+    } catch(\Stripe\Error\Card $e) {
+
+    }
+
+    return view('thanks');
+});
