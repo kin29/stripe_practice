@@ -52,3 +52,7 @@ app/Http/Middleware/VerifyCsrfToken.php
         'thanks' //追記
     ];
 ```
+
+## reference
+- [stripe API](https://stripe.com/docs/api#metadata)  
+- [Card Payments Quickstart](https://stripe.com/docs/quickstart)
