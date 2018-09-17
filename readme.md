@@ -1,7 +1,7 @@
 # stripe-php practice
 
 ## environment
-- PHP 5.6.31
+- PHP 5.6.30
 - Laravel 5.2
 - stripe
 
